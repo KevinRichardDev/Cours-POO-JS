@@ -3,16 +3,21 @@ const obj = {
   pseudo: "Ricke",
   ville: "Privas",
   admin: false,
+  direBonjour: function () {
+    console.log("Bonjour je suis" + " " + this.pseudo);
+  },
 
-  direBonjour() {
-    console.log("Bonjour");
-  }
+  //Eviter les fonctions fléchés dans les objets
+
+  // direBonjour() {
+  //   console.log("Bonjour je suis" + " " + this.pseudo);
+  // }
 };
 
 // Ajouter
 obj.age = 35;
 // ou
-obj["admin"] = true
+obj["admin"] = true;
 
 // Modifier
 obj.pseudo = "RK";
@@ -28,4 +33,4 @@ delete obj.ville;
 for (const key in obj) {
   // console.log(key + " : " + obj[key]);
 }
-console.log(obj);
+console.log(obj.direBonjour());
