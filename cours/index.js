@@ -2,17 +2,23 @@ const obj = {
   // index:value
   pseudo: "Ricke",
   ville: "Privas",
+  admin: false,
+
+  direBonjour() {
+    console.log("Bonjour");
+  }
 };
 
 // Ajouter
 obj.age = 35;
+// ou
+obj["admin"] = true
 
 // Modifier
 obj.pseudo = "RK";
 
 // Supprimer
 delete obj.ville;
-// console.log(obj);
 
 // Checker si propriété existe
 // console.log("pseudo" in obj);
@@ -20,5 +26,6 @@ delete obj.ville;
 
 //Parcourir l'objet
 for (const key in obj) {
-  console.log(key);
+  // console.log(key + " : " + obj[key]);
 }
+console.log(obj);
