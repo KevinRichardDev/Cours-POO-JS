@@ -33,4 +33,25 @@ delete obj.ville;
 for (const key in obj) {
   // console.log(key + " : " + obj[key]);
 }
-console.log(obj.direBonjour());
+// console.log(obj.direBonjour());
+
+// Obtenir les clés
+const keys = Object.keys(obj);
+// console.log(keys);
+
+//Obtenir les valeurs
+const values = Object.values(obj);
+// console.log(values);
+
+const nestedArray = Object.entries(obj)
+// console.log(nestedArray);
+
+
+const obj2 = {
+  taille: "1m60",
+  poids: "60kg"
+}
+
+// fusionner des objets
+const fusion = Object.assign({}, obj, obj2)
+console.log(fusion);
