@@ -80,4 +80,17 @@ function User(pseudo, ville) {
 const user1 = new User("Ricke", "Privas");
 const user2 = new User("Roger", "Marseille");
 
-console.log(user2.getCity());
+// console.log(user2.getCity());
+
+//-------------------------------
+//Factory functions
+
+function User3(pseudo, ville) {
+  return {
+    pseudo,
+    ville,
+  };
+}
+const user4 = User3("RIKE", "Privas");
+
+console.log(user4);
