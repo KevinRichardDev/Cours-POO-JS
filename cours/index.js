@@ -53,12 +53,31 @@ const obj2 = {
 
 // fusionner des objets
 const fusion = Object.assign({}, obj, obj2);
-console.log(fusion);
+// console.log(fusion);
 
 // Empecher les modoficiations
 // const newObj = Object.freeze(obj);
 const newObj = Object.seal(obj);
 newObj.pseudo = "Test";
-newObj.adresse = "42 avenue du code"
+newObj.adresse = "42 avenue du code";
 
-console.log(newObj);
+// console.log(newObj);
+
+//----------------------
+// Construire des objets
+//----------------------
+
+// Fonction constructeur
+function User(pseudo, ville) {
+  this.pseudo = pseudo;
+  this.ville = ville;
+
+  this.getCity = function() {
+    console.log(this.pseudo + " habite à " + this.ville);
+  }
+}
+
+const user1 = new User("Ricke", "Privas");
+const user2 = new User("Roger", "Marseille");
+
+console.log(user2);
