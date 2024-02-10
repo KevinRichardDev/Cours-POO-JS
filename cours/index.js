@@ -92,5 +92,26 @@ function User3(pseudo, ville) {
   };
 }
 const user4 = User3("RIKE", "Privas");
+// console.log(user4);
 
-console.log(user4);
+//-------------------------------------
+// Class
+
+class Utilisateur {
+  constructor(pseudo, ville) {
+    this.pseudo = pseudo;
+    this.ville = ville;
+  }
+  sayMyName = function() {
+    console.log("Bonjour je suis " + this.pseudo);
+  }
+}
+const user5 = new Utilisateur("Samia", "Lyon");
+
+// EN POO NE PAS UTILISER DE FONCTION FLECHÉES ------ IMPORTANT
+
+Utilisateur.prototype.sayCity = function () {
+  console.log("J'habite à " + this.ville);
+}
+
+console.log(user5.sayCity());
