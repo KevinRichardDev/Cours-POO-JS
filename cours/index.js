@@ -72,12 +72,12 @@ function User(pseudo, ville) {
   this.pseudo = pseudo;
   this.ville = ville;
 
-  this.getCity = function() {
+  this.getCity = function () {
     console.log(this.pseudo + " habite à " + this.ville);
-  }
+  };
 }
 
 const user1 = new User("Ricke", "Privas");
 const user2 = new User("Roger", "Marseille");
 
-console.log(user2);
+console.log(user2.getCity());
