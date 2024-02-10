@@ -43,15 +43,22 @@ const keys = Object.keys(obj);
 const values = Object.values(obj);
 // console.log(values);
 
-const nestedArray = Object.entries(obj)
+const nestedArray = Object.entries(obj);
 // console.log(nestedArray);
-
 
 const obj2 = {
   taille: "1m60",
-  poids: "60kg"
-}
+  poids: "60kg",
+};
 
 // fusionner des objets
-const fusion = Object.assign({}, obj, obj2)
+const fusion = Object.assign({}, obj, obj2);
 console.log(fusion);
+
+// Empecher les modoficiations
+// const newObj = Object.freeze(obj);
+const newObj = Object.seal(obj);
+newObj.pseudo = "Test";
+newObj.adresse = "42 avenue du code"
+
+console.log(newObj);
