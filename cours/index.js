@@ -115,3 +115,6 @@ Utilisateur.prototype.sayCity = function () {
 }
 
 console.log(user5.sayCity());
+
+let array = [1, 2, 3]
+console.log(array);
