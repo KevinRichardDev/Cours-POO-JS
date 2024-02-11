@@ -128,3 +128,5 @@ console.log(user5.sayCity());
 // let array = [1, 2, 3]
 // console.log(array);
 
+// IMPORTANT------ Les fonctions déclarer dans sayMyName sont plus lente à ce jouer
+//  que les fonctions déclarer dans le prototype.
