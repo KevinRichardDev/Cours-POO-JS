@@ -123,10 +123,42 @@ Object.assign(Utilisateur.prototype, {
   }
 })
 
-console.log(user5.sayCity());
+// console.log(user5.sayCity());
 
 // let array = [1, 2, 3]
 // console.log(array);
 
 // IMPORTANT------ Les fonctions déclarer dans sayMyName sont plus lente à ce jouer
 //  que les fonctions déclarer dans le prototype.
+
+//----------
+//L'héritage
+//----------
+
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age
+  }
+  saySomething(text) {
+    console.log(this.name + " dit : " + text);
+  }
+}
+
+class Dog extends Animal {
+  run() {
+    console.log("Le chien court ! ");
+  }
+}
+
+class Cat extends Animal {
+  hunt() {
+    console.log("J'ai tué un oiseau");
+  }
+}
+
+const rintintin = new Dog("Rintintin", 9)
+console.log(rintintin);
+
+const miko = new Cat("Miko", 5)
+console.log(miko);
